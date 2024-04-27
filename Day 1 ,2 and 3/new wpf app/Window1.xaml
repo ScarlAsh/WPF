@@ -1,0 +1,48 @@
+﻿<Window x:Class="new_wpf_app.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:new_wpf_app"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <RichTextBox Name="textBox">
+            <FlowDocument>
+                <Paragraph>
+                    This is a sample text inside the RichTextBox.
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+
+        <UniformGrid Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Width="100" Height="30" Margin="10,10,10,0" Click="setClicked">Set Text</Button>
+            <Button Width="100" Height="30" Margin="10,10,10,0" Click="selectClicked">Select All</Button>
+            <Button Width="100" Height="30" Margin="10,10,10,0" Click="clearClicked">Clear</Button>
+            <Button Width="100" Height="30" Margin="10,10,10,0" Click="prependClicked">Prepend</Button>
+            <Button Width="100" Height="30" Margin="10,10,10,0" Click="insertClicked">Insert</Button>
+            <Button Width="100" Height="30" Margin="10,10,10,0" Click="appendClicked">Append</Button>
+            <Button Width="100" Height="30" Margin="10,10,10,0" Click="cutClicked">Cut</Button>
+            <Button Width="100" Height="30" Margin="10,10,10,0" Click="pasteClicked">Paste</Button>
+            <Button Width="100" Height="30" Margin="10,10,10,0" Click="undoClicked">Undo</Button>
+
+        </UniformGrid>
+
+        <UniformGrid Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <RadioButton Margin="10" Click="edit">Editable</RadioButton>
+                <RadioButton Margin="10" Click="readonlyClicked">Readonly</RadioButton>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <RadioButton Margin="10" Click="leftCLicked">Left</RadioButton>
+                <RadioButton Margin="10" Click="centerClicked">Center</RadioButton>
+                <RadioButton Margin="10" Click="rightClicked">Right</RadioButton>
+            </StackPanel>
+        </UniformGrid>
+    </Grid>
+</Window>

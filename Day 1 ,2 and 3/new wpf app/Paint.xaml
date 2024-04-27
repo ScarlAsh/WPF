@@ -1,0 +1,82 @@
+﻿<Window x:Class="Labone.Paint"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Labone"
+        mc:Ignorable="d"
+        Title="Paint" Height="400" Width="670">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*">
+            </RowDefinition>
+            
+            <RowDefinition>
+            </RowDefinition>
+
+        </Grid.RowDefinitions>
+
+        <Border Background="Aqua" BorderThickness="5" Padding="5" BorderBrush="Red">
+            <InkCanvas Name="canvas"></InkCanvas>
+        </Border>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <GroupBox Header="Color" Width="200" Height="100">
+                <StackPanel Orientation="Vertical">
+                    <RadioButton Click='changeColor'>Red</RadioButton>
+                    <RadioButton Click='changeColor'>Green</RadioButton>
+                    <RadioButton Click='changeColor'>Blue</RadioButton>
+                    <RadioButton Click='changeColor'>Magenta</RadioButton>
+                </StackPanel>
+            </GroupBox>
+
+            <GroupBox Header="Mode" Width="200" Height="100">
+                <StackPanel Orientation="Vertical">
+                    <RadioButton Click='changeMode'>Ink</RadioButton>
+                    <RadioButton Click='changeMode'>Select</RadioButton>
+                    <RadioButton Click='changeMode'>Erase</RadioButton>
+                    <RadioButton Click='changeMode'>Erase by stroke</RadioButton>
+                </StackPanel>
+            </GroupBox>
+
+            <GroupBox Header="Drawing Shape" Width="200" Height="100">
+                <StackPanel Orientation="Vertical">
+                    <RadioButton Click='changeShape'>Ellipse</RadioButton>
+                    <RadioButton Click='changeShape'>Rectangle</RadioButton>
+                </StackPanel>
+            </GroupBox>
+
+            <GroupBox Header="Brush Size" Width="200" Height="100">
+                <StackPanel Orientation="Vertical">
+                    <RadioButton Click='changeSize'>Small</RadioButton>
+                    <RadioButton Click='changeSize'>Normal</RadioButton>
+                    <RadioButton Click='changeSize'>Large</RadioButton>
+
+                </StackPanel>
+            </GroupBox>
+
+
+
+
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                    <Button Margin="0,10,10,10" Width="50" Height ="30" Click="newClicked">New</Button>
+                    <Button Margin="0,10,10,10" Width="50" Height ="30" Click="saveClicked" Grid.Column="1">Save</Button>
+                    <Button Margin="0,10,10,10" Width="50" Height ="30" Click="loadClicked" Grid.Column="2">Load</Button>
+                    <Button Margin="0,0,10,10" Width="50" Height ="30" Click="copyClicked" Grid.Row="1">Copy</Button>
+                    <Button Margin="0,0,10,10" Width="50" Height ="30" Click="cutClicked" Grid.Row="1" Grid.Column="1">Cut</Button>
+                    <Button Margin="0,0,10,10" Width="50" Height ="30" Click="pasteClicked" Grid.Row="1" Grid.Column="2">Paste</Button>
+            </Grid>
+        </StackPanel>
+
+       
+    </Grid>
+</Window>

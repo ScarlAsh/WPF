@@ -1,0 +1,60 @@
+﻿<Window x:Class="Labone.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Labone"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Content="FirstName" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="5,1,0,1"></Label>
+        <TextBox Name="fname" Grid.Column="1" Margin="0,1,5,1" Height="30"></TextBox>
+
+
+        <Label Content="LastName" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="5,1,0,1" Grid.Row="1"></Label>
+        <TextBox Name="lname" Grid.Column="1" Margin="0,1,5,1" Height="30" Grid.Row="1"></TextBox>
+
+
+        <Label Content="Gender" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="5,1,0,1" Grid.Row="2"></Label>
+        <TextBox Name="gender" Grid.Column="1" Margin="0,1,5,1" Height="30" Grid.Row="2"></TextBox>
+
+
+        <Label Content="Address" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="5,1,0,1" Grid.Row="3"></Label>
+        <TextBox Name="address" Grid.Column="1" Margin="0,1,5,1" Height="30" Grid.Row="3"></TextBox>
+
+        <Label Content="Phone" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="5,1,0,1" Grid.Row="4"></Label>
+        <TextBox Name="phone" Grid.Column="1" Margin="0,1,5,1" Height="30" Grid.Row="4"></TextBox>
+
+
+        <Label Content="Mobile" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="5,1,0,1" Grid.Row="5"></Label>
+        <TextBox Name="mobile" Grid.Column="1" Margin="0,1,5,1" Height="30" Grid.Row="5"></TextBox>
+
+        <Label Content="Email" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="5,1,0,1" Grid.Row="6"></Label>
+        <TextBox Name="email" Grid.Column="1" Margin="0,1,5,1" Height="30" Grid.Row="6"></TextBox>
+
+        <Label Content="Job Title" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="5,1,0,1" Grid.Row="7"></Label>
+        <TextBox Name="job" Grid.Column="1" Margin="0,1,5,1" Height="30" Grid.Row="7"></TextBox>
+
+        <StackPanel Grid.Row="8" Orientation="Horizontal" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.RowSpan="2">
+            <Button Name="btn1" Width="50" Height="40" Margin="0,0,5,0" Click="okClicked">Ok</Button>
+            <Button Name="btn2" Width="70" Height="40" Click="cancelClicked">Cancel</Button>
+        </StackPanel>
+
+    </Grid>
+</Window>
